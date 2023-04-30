@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Helvetica;
+}
+p {
+    padding: 10px;
+}
+body {
+    background-color: white;
+    text-align: center;
+    font-size: 100%;
+    font-family: Helvetica;
+    width:400px;
+    height:400px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    animation: playOnce 1s;
+    animation-iteration-count: 1;
+}
+
+.content{
+    margin: 10px;
+}
+
+.topbar {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    color: black;
+    font-size: 20px;
+}
+
+.editable {
+    font-family: Helvetica;
+    resize: none;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 3.75vh;
+    border: 0px;
+    border-radius: 7px;
+    padding: 30px;
+    overflow-y: scroll;
+
+}
+
+.editable:empty:before {
+    content: attr(placeholder);
+    opacity: 0.5;
+    padding: 4px;
+}
+
+.editable::-webkit-scrollbar {
+    width: 0 !important
+}
+
+#input {
+    height: 60px
+}
+
+#output {
+    height: 270px;
+}
+
+a {
+    text-decoration: none;
+    color: #16e16e;
+}
+
+a:hover {
+    cursor: pointer;
+}

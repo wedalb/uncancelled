@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Biased Detector",
+    "description": "A chrome extension that tells you when text is sexist",
+    "version": "1.0.0",
+    "host_permissions": ["https://*.openai.com/"],
+    "permissions": ["storage", "tabs", "webRequest"],
+    "icons": {
+        "512": "assets/icons/logo.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
